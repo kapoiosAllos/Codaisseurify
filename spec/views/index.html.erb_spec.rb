@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "index.html.erb" do
+describe "artists/index.html.erb" do
   let(:artist) {create :artist}
 
   it "renders name" do
