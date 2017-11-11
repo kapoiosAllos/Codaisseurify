@@ -1,6 +1,6 @@
 
 FactoryGirl.define do
   factory :artist do
-    name    {  Faker::Lorem.word(30) }
+    name    {  Faker::Name.name }
   end
 end

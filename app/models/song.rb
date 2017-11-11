@@ -3,4 +3,5 @@ class Song < ApplicationRecord
 
   validates :name, presence: {message: "Song name must exists"}
   validates :duration, numericality: { only_integer: true, greater_than: 1, less_than: 600 }
+  validates_associated :artist
 end
