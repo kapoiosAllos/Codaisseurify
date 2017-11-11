@@ -1,0 +1,9 @@
+<h1><%= @artist.name %></h1>
+
+<%= image_tag @artist.image.thumbnail %>
+
+<h3>List of songs</h3>
+<br>
+<% @songs.each do |song|%>
+<h4><%=  "#{song.name} #{song.duration} seconds"  %></h4>
+<% end %>
