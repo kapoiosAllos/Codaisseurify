@@ -7,6 +7,7 @@
 <ul>
   <% @songs.each do |song|%>
     <li>
+      <%= youtube_video song.link %>
       <h4><%= link_to "#{song.name}", song.link, target:"_blank" %></h4>
       <p><%=  " Duration #{song.duration/60}:#{song.duration%60}"  %></p>
     </li>
