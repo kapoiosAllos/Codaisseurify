@@ -10,6 +10,11 @@
   <%= f.number_field :duration, placeholder: "Duration", min:1, max:600, class: "form-control" %>
 </div>
 
+<div class="form-group">
+  <label>Youtube Link</label>
+  <%= f.url_field :link, placeholder: "Youtube Link", class: "form-control" %>
+</div>
+
 <label>Submit this song?</label>
 
 <div class="actions">
