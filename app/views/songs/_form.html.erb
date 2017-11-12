@@ -7,7 +7,7 @@
 
 <div class="form-group">
   <label>Song duration</label>
-  <%= f.range_field :duration, placeholder: "Duration", class: "form-control" %>
+  <%= f.number_field :duration, placeholder: "Duration", min:1, max:600, class: "form-control" %>
 </div>
 
 <label>Submit this song?</label>

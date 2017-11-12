@@ -7,6 +7,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+gem 'rails_12factor', group: :production
 gem 'cloudinary', '1.2.3'
 gem 'carrierwave', '0.11.2'
 gem 'jquery-rails', '~> 4.3.1'
