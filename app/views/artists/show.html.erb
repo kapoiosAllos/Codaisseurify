@@ -6,7 +6,10 @@
 <br>
 <ul>
   <% @songs.each do |song|%>
-    <li><h4><%=  "#{song.name} #{song.duration/60}:#{song.duration%60}"  %></h4> </li>
+    <li>
+      <h4><%= link_to "#{song.name}", song.link, target:"_blank" %></h4>
+      <p><%=  " Duration #{song.duration/60}:#{song.duration%60}"  %></p>
+    </li>
     <%= link_to "Delete song", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" },class: "btn btn-default" %>
   <% end %>
 </ul>

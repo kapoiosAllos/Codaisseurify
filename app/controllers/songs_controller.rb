@@ -28,7 +28,7 @@ def song_params
 params
       .require(:song)
       .permit(
-        :name,:duration
+        :name,:duration, :link
       )
 end
 end
