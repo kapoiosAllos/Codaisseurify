@@ -1,5 +1,19 @@
 <h1>Artists</h1>
 <hr>
+<span class "pull-right">
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown">
+  Sort by
+  <span class = "caret"></span>
+  </span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><%= link_to "Name ascending", artists_path(sort_by: "name_ascending")%></li>
+    <li><%= link_to "Name descending", artists_path(sort_by: "name_descending")%></li>
+    <li><%= link_to "Oldest", artists_path(sort_by: "oldest")%></li>
+    <li><%= link_to "Newest", artists_path(sort_by: "newest")%></li>
+  </ul>
+</div>
 <ul>
   <% @artists.each do |artist| %>
     <li><h4><%= link_to artist.name, artist_path(artist.id) %></h4></li>
