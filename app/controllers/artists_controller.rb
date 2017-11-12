@@ -24,6 +24,7 @@ class ArtistsController < ApplicationController
 
   def edit
      @artist = Artist.find(params[:id])
+
   end
 
   def update
@@ -50,7 +51,7 @@ private
     params
           .require(:artist)
           .permit(
-            :name
+            :name, :image
           )
   end
 

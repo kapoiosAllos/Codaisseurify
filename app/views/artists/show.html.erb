@@ -5,9 +5,15 @@
 <h3>List of songs</h3>
 <br>
 <% @songs.each do |song|%>
-  <h4><%=  "#{song.name} #{song.duration} seconds"  %></h4>
+  <h4><%=  "#{song.name} #{song.duration/60}:#{song.duration%60}"  %></h4>
+  <%= link_to "Delete song", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" },class: "btn btn-default" %>
 <% end %>
 
-<%= link_to "Update Artist", edit_artist_path(@artist), class: "btn btn-default" %>
-<%= link_to "Delete", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" },class: "btn btn-default" %>
+<hr>
+
+<%= link_to "Change Artist's info", edit_artist_path(@artist), class: "btn btn-default" %>
+<%= link_to "Add a new song", new_artist_song_path(@artist), class: "btn btn-default" %>
+<%= link_to "Delete Artist", artist_path(@artist.id), method: :delete, data: { confirm: "Are you sure?" },class: "btn btn-default" %>
 <%= link_to "Back", artists_path, class: "btn btn-default" %>
+
+<hr>

@@ -1,6 +1,6 @@
 class Artist < ApplicationRecord
   has_many :songs, dependent: :destroy
-
+  #mount_uploader :image, AvatarUploader
   mount_uploader :image, ImageUploader
 
   validates :name, presence: { message: "We dont accept nameless artists" }
