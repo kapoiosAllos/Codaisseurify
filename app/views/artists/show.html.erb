@@ -4,11 +4,12 @@
 
 <h3>List of songs</h3>
 <br>
-<% @songs.each do |song|%>
-  <h4><%=  "#{song.name} #{song.duration/60}:#{song.duration%60}"  %></h4>
-  <%= link_to "Delete song", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" },class: "btn btn-default" %>
-<% end %>
-
+<ul>
+  <% @songs.each do |song|%>
+    <li><h4><%=  "#{song.name} #{song.duration/60}:#{song.duration%60}"  %></h4> </li>
+    <%= link_to "Delete song", artist_song_path(@artist, song), method: :delete, data: { confirm: "Are you sure?" },class: "btn btn-default" %>
+  <% end %>
+</ul>
 <hr>
 
 <%= link_to "Change Artist's info", edit_artist_path(@artist), class: "btn btn-default" %>
