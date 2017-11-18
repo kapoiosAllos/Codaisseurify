@@ -2,6 +2,7 @@ class ArtistsController < ApplicationController
 
   def index
     @artists = Artist.all.order_list(params[:sort_by])
+    #@artists ||= []
   end
 
   def show
